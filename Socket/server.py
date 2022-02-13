@@ -5,5 +5,6 @@ import socket
 # host = socket.gethostbyname(socket.gethostname())
 
 HOST = ''
+PORT = 
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
