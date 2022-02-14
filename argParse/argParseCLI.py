@@ -1,10 +1,10 @@
 import argparse
 
 SIZES = {
-    "s": "Small"
-    "m": "Medium"
-    "l": "Large"
-    "x1": "Extra Large"
+    "s": "Small",
+    "m": "Medium",
+    "l": "Large",
+    "x1": "Extra Large",
     "xx1": "Extra extra large"
 }
 
@@ -23,3 +23,5 @@ def build_pizza(order):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Welcome to the pizza builder, let's buil a pizza!!")
+    parser.add_argument("size", type=str, choices=SIZES.keys(), help="Size of your Pizza")
+    parsed_args = parser.parse_args()
