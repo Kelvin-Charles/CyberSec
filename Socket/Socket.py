@@ -32,7 +32,7 @@ class Scanner:
 @timefunc
 def main():
     # IP to scan for open ports
-    ip = '172.20.10.9'
+    ip = '169.254.16.26'
     scanner = Scanner(ip)
     scanner.scan(1, 65535)
     scanner.write('./open_ports')
