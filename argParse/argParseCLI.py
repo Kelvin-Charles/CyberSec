@@ -23,5 +23,14 @@ def build_pizza(order):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Welcome to the pizza builder, let's buil a pizza!!")
+   
+#Positional Argument
     parser.add_argument("size", type=str, choices=SIZES.keys(), help="Size of your Pizza")
+    parser.add_argument("crust", type=str, choices=SIZES.keys(), help="Type of Pizza crust")
+# Optional Argument
+    parser.add_argument("-c", "--extra-cheese", action="store_true", dest="cheese", help="Add extra Sauce to your Pizza")
+    parser.add_argument("-s", "--extra-sauce", action="store_true", dest="sauce", help="Add extra Sauce to your Pizza")
+    # Collect into a list
+    parser.add_argument("-t", "--toppings", type=str, nargs="+")
     parsed_args = parser.parse_args()
+    print(parsed_args)
