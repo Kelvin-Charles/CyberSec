@@ -6,6 +6,7 @@ def mapper(func):
 
     def inner(list_of_values):
 
+        """ This is the inner() function """
         return [func(value) for value in list_of_values]
 
     return  inner
@@ -16,9 +17,11 @@ def mapper(func):
 @mapper
 def camelcase(s):
     
-    # Turn Strings_like_this into StringsLikeThis
+    """
+        Turn Strings_like_this into StringsLikeThis
+        List Comprehension
+    """
 
-    # List Comprehension
     return ''.join([word.capitalize() for word in s.split('_')])
 
 names = [
@@ -28,4 +31,4 @@ names = [
 ]
 
 print(camelcase(names))
-
+print(camelcase.__doc__)
