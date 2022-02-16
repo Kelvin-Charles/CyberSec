@@ -1,9 +1,12 @@
+from functools import wraps
+
 # A typical decorator With an inner() function
 
 
 # Mapper is going to take a camelcase function and change into a map
 def mapper(func):
 
+    @wraps(func)
     def inner(list_of_values):
 
         """ This is the inner() function """
