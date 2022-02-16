@@ -2,9 +2,9 @@ import random
 
 # Decorators with arguments
 
-def power_of(exponent):
+# Meta decorator
+def power_of(exponent = 2):
 
-    # Meta decorator
     def decorator(func):
 
         def inner():
@@ -17,7 +17,7 @@ def power_of(exponent):
 
 
 
-@power_of(2)
+@power_of()
 def random_odd_digits():
 
     return random.choice([1, 3, 5, 7, 9])
